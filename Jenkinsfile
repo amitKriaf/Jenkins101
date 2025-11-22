@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'python:3.10-alpine'
+            image 'python:3.10'
         }
     }
 
@@ -12,9 +12,9 @@ pipeline {
             }
         }
 
-        stage('Run Python Script') {
+        stage('Run HelloWorld') {
             steps {
-                sh 'python3 helloworld.py'
+                sh 'python python/helloworld.py'
             }
         }
     }
